@@ -224,12 +224,27 @@ fieldset {
   color: #888;
 }
 
+#form1{
+  margin-top: 20px;
+}
+
+#form{
+  margin-top:40px;
+}
 
 #imagen{
-	margin-top: 140px;
+	margin-top: 80px;
+  -webkit-border-radius:50px 50px;/*Para chrome y Safari*/
+    -moz-border-radius:400px 400px;/*Para Firefox*/
+    -o-border-radius:10px 10px;/*Para Opera*/
+    border-radius:100px 0px;/*El estandar por defecto*/
 }
 
 #im2{
   margin-top: 20px;
   margin-bottom: 20px;
+  -webkit-border-radius:10px 10px;/*Para chrome y Safari*/
+    -moz-border-radius:10px 10px;/*Para Firefox*/
+    -o-border-radius:10px 10px;/*Para Opera*/
+    border-radius:10px 10px;/*El estandar por defecto*/
 }

@@ -43,24 +43,31 @@
   </form>
 </div>
 
+
+<!-- Arbitro -->
+
+
 <div class="container">  
   <form class="contact" id="form1" action="" method="post">
     <h3>Registro de &Aacute;rbitro</h3>
     <h4>Ingrese todos los campos</h4>
     <fieldset>
-      <input placeholder="Universidad" type="text" tabindex="1" required autofocus>
+      <b>Nombre: <input placeholder="Nombre" type="text" tabindex="1" required autofocus></b>
     </fieldset>
     <fieldset>
-      <input placeholder="Direccion" type="email" tabindex="2" required>
+      <b>Direcci&oacute;n: <input placeholder="Direccion" type="text" tabindex="2" required></b>
     </fieldset>
     <fieldset>
-      <input placeholder="Telefono" type="tel" tabindex="3" required>
+      <b>Telefono: <input placeholder="Telefono" type="tel" tabindex="3" required></b>
     </fieldset>
     <fieldset>
-      <input placeholder="Correo" type="url" tabindex="4" required>
+      <b>Correo: <input placeholder="Correo" type="email" tabindex="4" required></b>
     </fieldset>
     <fieldset>
-      <textarea placeholder="Director" tabindex="5" required></textarea>
+      <b>Usuario<input placeholder="Usuario" type="text" required></input></b>
+    </fieldset>
+    <fieldset>
+      <b>Contrase&ntilde;a<input placeholder="Usuario" type="text" required></input></b>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
