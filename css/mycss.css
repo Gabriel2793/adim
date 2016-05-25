@@ -30,11 +30,11 @@ nav{
     -moz-border-radius:10px;/*Para Firefox*/
     -o-border-radius:10px;/*Para Opera*/
     border-radius:10px;/*El estandar por defecto*/
-    background-image: -webkit-gradient(linear, left top, left bottom, from(#FFF), to(#CCC));/*Para chrome y Safari*/
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#F5D0A9), to(#FE9A2E));/*Para chrome y Safari*/
     /*Degradados*/
     background-image: -moz-linear-gradient(top center, #F5D0A9, #FE9A2E);/*Para Firefox*/
-    background-image: -o-linear-gradient(top, #FFF, #CCC);/*Para Opera*/
-    background-image: linear-gradient(top, #FFF, #CCC);/*El estandar por defecto*/
+    background-image: -o-linear-gradient(top, #F5D0A9, #FE9A2E);/*Para Opera*/
+    background-image: linear-gradient(top, #F5D0A9, #FE9A2E);/*El estandar por defecto*/
     overflow:hidden;
     padding:10px;
     width:950px;
@@ -232,12 +232,14 @@ fieldset {
   margin-top:40px;
 }
 
-#imagen{
+.imagen{
 	margin-top: 80px;
   -webkit-border-radius:50px 50px;/*Para chrome y Safari*/
     -moz-border-radius:400px 400px;/*Para Firefox*/
     -o-border-radius:10px 10px;/*Para Opera*/
     border-radius:100px 0px;/*El estandar por defecto*/
+    width: 40em;
+    height: 40em;
 }
 
 #im2{
@@ -249,7 +251,7 @@ fieldset {
     border-radius:10px 10px;/*El estandar por defecto*/
 }
 
-#password{
+.password{
   width:100%;
-  height: 30px;
+  height: 40px;
 }

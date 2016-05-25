@@ -26,7 +26,20 @@
 					<a href='cerrarS.php'><li class="col-md-2" id="is">Cerrar Sesi&oacute;n</li></a>
 				</ul>
 			</nav>
-			<center><img src="../images/logo.jpg" id="imagen"></center>
+			<div class="container">
+				<center>
+						<img src="../images/logo.jpg" class="imagen col-mid-6">
+						<?php 
+
+							if($_SESSION['u_usuario']=='UNAM'){
+								echo "<img src='../images/unam.jpg' class='imagen col-md-6'>";
+							}else{
+								echo "<img src='../images/Desconocido.png' class='imagen col-md-6'>";
+							}
+
+						 ?>
+				</center>
+			</div>
 <script src="../js/jquery.js"></script>
 <script src="../js/myjs.js"></script>
  </body>

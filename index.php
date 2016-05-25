@@ -26,26 +26,29 @@
 				</ul>
 			</nav>
 			<div class="container">  
-  <form class="contact" id="form" action="" method="post">
+  <form class="contact" id="form" action="sesion/RU.php" method="post">
     <h3>Registro de Universidad</h3>
     <h4>Ingrese todos los campos</h4>
     <fieldset>
-      <input placeholder="Universidad" type="text" tabindex="1" required autofocus>
+      <input name="nombreU" placeholder="Universidad" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Direccion" type="email" tabindex="2" required>
+      <input name="estado" placeholder="Estado" type="text" tabindex="2" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Telefono" type="tel" tabindex="3" required>
+      <input name="calleU" placeholder="Calle" type="text" tabindex="3" required>
     </fieldset>
     <fieldset>
-      <input placeholder="Correo" type="url" tabindex="4" required>
+      <input name="coloniaU" placeholder="Colonia" type="text" tabindex="4" required>
     </fieldset>
     <fieldset>
-      <textarea placeholder="Director" tabindex="5" required></textarea>
+      <input name="delegacionU" type="text" placeholder="Delegaci&oacute;n" tabindex="5" required></input>
     </fieldset>
     <fieldset>
-      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+      <input name="password" type="password" placeholder="password" class="password" tabindex="5" required></input>
+    </fieldset>
+    <fieldset>
+      <button type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
     </fieldset>
   </form>
 </div>
@@ -92,14 +95,14 @@
       <input name='usuario' placeholder="Universidad" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input name='password' id="password" placeholder="Password" type="password" tabindex="2" size="10px" required>
+      <input name='password' class="password" placeholder="Password" type="password" tabindex="2" size="10px" required>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
     </fieldset>
   </form>
 </div>
-<center><img src="images/logo.jpg" id="imagen"></center>
+<center><img src="images/logo.jpg" class="imagen"></center>
 <script src="js/jquery.js"></script>
 <script src="js/myjs.js"></script>
 		</body>
