@@ -6,6 +6,13 @@
 			<link rel="stylesheet" type="text/css" href="css/mycss.css">
 		</head>
 		<body>
+      <?php 
+
+    session_start();
+    if(isset($_SESSION['u_usuario'])){
+      header("location:sesion/sesion.php");
+    }
+    ?>  
 			<div class="container">
 				<center><img src="images/3darchery.jpg" id="im2"></center>
 			</div>
