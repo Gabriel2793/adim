@@ -248,3 +248,8 @@ fieldset {
     -o-border-radius:10px 10px;/*Para Opera*/
     border-radius:10px 10px;/*El estandar por defecto*/
 }
+
+#password{
+  width:100%;
+  height: 30px;
+}

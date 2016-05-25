@@ -75,15 +75,17 @@
   </form>
 </div>
 
+<!--Sesion-->
+
 <div class="container">  
-  <form class="contact" id="form2" action="" method="post">
+  <form class="contact" id="form2" action="sesion/ingresa.php" method="post">
     <h3>Iniciar Sesi&oacute;n</h3>
     <h4>Ingrese todos los campos</h4>
     <fieldset>
-      <input placeholder="Universidad" type="text" tabindex="1" required autofocus>
+      <input name='usuario' placeholder="Universidad" type="text" tabindex="1" required autofocus>
     </fieldset>
     <fieldset>
-      <input placeholder="Password" type="text" tabindex="2" required>
+      <input name='password' id="password" placeholder="Password" type="password" tabindex="2" size="10px" required>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
