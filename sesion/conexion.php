@@ -1,5 +1,5 @@
 <?php 
 
-	$conexion = new mysqli("localhost","root","","Sesion");
+	$conexion = new mysqli("localhost","root","","admin");
 	
  ?>
