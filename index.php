@@ -7,7 +7,7 @@
 		</head>
 		<body>
 			<div class="container">
-				<h1 class="col-md-12"></h1>
+				<center><img src="images/3darchery.jpg" id="im2"></center>
 			</div>
 			<nav class="container">
 				<ul class="container">

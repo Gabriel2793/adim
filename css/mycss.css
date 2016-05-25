@@ -1,6 +1,8 @@
 body{
 	background-image: url("../images/CU2.jpg");
     background-color: #cccccc;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 form{
@@ -8,7 +10,7 @@ form{
 }
 
 h1{
-	background-image: url("../images/letras.png");
+	background-image: url("../images/3darchery.jpg");
 	-webkit-border-radius:10px;/*Para chrome y Safari*/
     -moz-border-radius:10px;/*Para Firefox*/
     -o-border-radius:10px;/*Para Opera*/
@@ -223,6 +225,11 @@ fieldset {
 }
 
 
-img{
+#imagen{
 	margin-top: 140px;
+}
+
+#im2{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
