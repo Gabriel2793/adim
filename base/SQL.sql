@@ -39,7 +39,7 @@ ENGINE = InnoDB;
 CREATE TABLE IF NOT EXISTS `mydb`.`EQUIPO` (
   `clvEquipo` INT AUTO_INCREMENT NOT NULL,
   `nombreE` VARCHAR(45) NOT NULL,
-  `numIntegrantes` VARCHAR(45) NOT NULL,
+  `numIntegrantes` INT NOT NULL,
   `status` VARCHAR(45) NOT NULL,
   `UNIVERSIDAD_idUniversidad` INT NOT NULL,
   PRIMARY KEY (`clvEquipo`),
