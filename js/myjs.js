@@ -39,6 +39,15 @@ $( document ).ready(function() {
 		$(".imagen").css({"width":"20em","height":"20em","margin-top":"2em"});
 	});
 
+	$("#RA").click(function(){
+		$("#form").hide();
+		$("#form1").show();
+		$("#verequipo").hide();
+		$("#form2").hide();
+		$(".ocultar").hide();
+		$(".imagen").css({"width":"20em","height":"20em","margin-top":"2em"});
+	});
+
 	$("#verE").click(function(){
 		$("#form").hide();
 		$("#verequipo").show();

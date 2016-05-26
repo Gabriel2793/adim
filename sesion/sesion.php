@@ -17,15 +17,17 @@
  	<div class="container">
 				<center><img src="../images/3darchery.jpg" id="im2"></center>
 			</div>
+			<div class="container">
 			<nav class="container">
-				<ul class="container">
-					<li class="col-md-1" id="h">Home</li>
-					<li class="col-md-3" id="RE">Registrar Equipo</li>
-					<li class="col-md-2" id="ra">Ver Calendario</li>
-					<li class="col-md-3" id="verE">Ver Equipos</li>
-					<a href='cerrarS.php'><li class="col-md-2" id="is">Cerrar Sesi&oacute;n</li></a>
+				<ul class="row">
+					<li class="col-md-2" id="RE">Registrar Equipo</li>
+					<li class="col-md-2" id="RA">Registrar alumno</li>
+					<li class="col-md-2" id="RC">Ver Calendario</li>
+					<li class="col-md-2" id="verE">Ver Equipos</li>
+					<a href='cerrarS.php' ><li class="col-md-3" >Cerrar Sesi&oacute;n</li></a>
 				</ul>
 			</nav>
+			</div>
 			<div class="container">
 			<div class="row">
 				<center>
@@ -90,6 +92,71 @@
       <button type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
     </fieldset>
   </form>
+  	<div class="container">  
+  <form class="contact" id="form1" action="" method="post">
+    <h3>Registro de Estudiantes</h3>
+    <h4>Ingrese todos los campos</h4>
+    <fieldset>
+		    					<?php 
+
+		    						$conexion3 = new Conecta();
+      $conexion3-> query = "SELECT e.clvEquipo as clave, e.nombreE AS nombreE FROM EQUIPO e, UNIVERSIDAD u where u.idUniversidad = e.UNIVERSIDAD_idUniversidad and u.nombreU = '".$_SESSION['u_usuario']."'";
+
+            $conexion3 -> select_query();
+            $reg = count($conexion3 -> rows);
+            if($reg>0){
+                foreach ($conexion3 as $key => $value) {
+                    $datos=$value;
+                }
+                echo " <select class='form-control' name='idequipo' placeholder='Elige equipo'>";
+                for($i=0; $i < $reg; $i++){ 
+                    echo "<option value=".$datos[$i]['clave'].">".$datos[$i]['nombreE']."</option>";
+		    						
+                }
+                 echo "</select>";
+            }
+
+		    					 ?>
+		    					
+							        
+							   
+    </fieldset>
+    <fieldset>
+		    					<?php 
+
+		    						$conexion4 = new Conecta();
+      $conexion4-> query = "SELECT e.clvEquipo as clave, e.nombreE AS nombreE FROM EQUIPO e, UNIVERSIDAD u where u.idUniversidad = e.UNIVERSIDAD_idUniversidad and u.nombreU = '".$_SESSION['u_usuario']."'";
+
+            $conexion4 -> select_query();
+            $reg = count($conexion4 -> rows);
+            if($reg>0){
+                foreach ($conexion4 as $key => $value) {
+                    $datos=$value;
+                }
+                echo " <select class='form-control' name='idequipo' placeholder='Elige equipo'>";
+                for($i=0; $i < $reg; $i++){ 
+                    echo "<option value=".$datos[$i]['clave'].">".$datos[$i]['nombreE']."</option>";
+		    						
+                }
+                 echo "</select>";
+            }
+
+		    					 ?>
+		    					
+							        
+							   
+    </fieldset>
+    <fieldset>
+      <input name="nombrePila" placeholder="Nombre de Pila" type="text" tabindex="2" required>
+    </fieldset>
+    <fieldset>
+      <input name="apPatP" placeholder="Apellido paterno" type="text" tabindex="3" required>
+    </fieldset>
+    <fieldset>
+      <input name="apMatP" placeholder="Apellido materno" type="text" tabindex="4" required>
+    </fieldset>
+  </form>
+</div>
   <br>
   	<br>
   <div id="verequipo" class="colortabla">
