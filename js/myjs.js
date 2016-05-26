@@ -28,4 +28,12 @@ $( document ).ready(function() {
 		$("#imagen").hide();
 		$("#form2").show();
 	});
+	$("#RE").click(function(){
+		$("#form").show();
+		$("#form1").hide();
+		$("#form2").show();
+		$(".imagen").css({"width":"20em","height":"20em"});
+	});
+
+	
 });

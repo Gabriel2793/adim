@@ -238,8 +238,8 @@ fieldset {
     -moz-border-radius:400px 400px;/*Para Firefox*/
     -o-border-radius:10px 10px;/*Para Opera*/
     border-radius:100px 0px;/*El estandar por defecto*/
-    width: 40em;
-    height: 40em;
+    width: 30em;
+    height: 30em;
 }
 
 #im2{

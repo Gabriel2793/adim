@@ -20,26 +20,26 @@
 			<nav class="container">
 				<ul class="container">
 					<li class="col-md-1" id="h">Home</li>
-					<li class="col-md-3" id="ru">Registrar Equipo</li>
+					<li class="col-md-3" id="RE">Registrar Equipo</li>
 					<li class="col-md-2" id="ra">Ver Calendario</li>
 					<li class="col-md-3">Observaciones</li>
 					<a href='cerrarS.php'><li class="col-md-2" id="is">Cerrar Sesi&oacute;n</li></a>
 				</ul>
 			</nav>
 			<div class="container">
-				<center>
-						<img src="../images/logo.jpg" class="imagen col-mid-6">
-						<?php 
-
-							if($_SESSION['u_usuario']=='UNAM'){
-								echo "<img src='../images/unam.jpg' class='imagen col-md-6'>";
-							}else{
-								echo "<img src='../images/Desconocido.png' class='imagen col-md-6'>";
-							}
-
-						 ?>
+			<div class="row">
+				<div class="col-md-6">
+					<center>
+				<img src="../images/logo.jpg" class="imagen">
 				</center>
+				</div>
+				<div class="col-md-6">
+					<center>
+				<img src='../images/unam.jpg' class="imagen">
+				</center>
+				</div>
 			</div>
+		</div>
 			<div class="container">  
   <form class="contact" id="form" action="sesion/RU.php" method="post">
     <h3>Registro de Equipo</h3>
@@ -55,7 +55,7 @@
     </fieldset>
     <fieldset>
       <?php
-      		echo "<input name="coloniaU" placeholder="Colonia" type='text' tabindex="4" value="$_SESSION['u_usuario']" required>"
+      		echo "<input name='coloniaU' placeholder='".$_SESSION['u_usuario']."' type='text' tabindex='4' value='".$_SESSION['u_usuario']."' disabled required>";
       ?>
     </fieldset>
       <button type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
