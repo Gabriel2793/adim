@@ -10,7 +10,11 @@
 	if($resultado = mysqli_fetch_array($ingresa)){
 		$_SESSION['u_usuario']=$usuario;
 		$ingresa->close();
-		header("location:sesion.php");
+		if(substr($_SESSION['u_usuario'], 3)==="ARB"){
+        header("location:sesion/sesionARB.php");
+      }else{
+        header("location:sesion/sesion.php");
+      }
 	}else{
 		$ingresa->close();
 		header("location:../index.php");

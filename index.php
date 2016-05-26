@@ -10,7 +10,11 @@
 
     session_start();
     if(isset($_SESSION['u_usuario'])){
-      header("location:sesion/sesion.php");
+      if(substr($_SESSION['u_usuario'], 3)==="ARB"){
+        header("location:sesion/sesionARB.php");
+      }else{
+        header("location:sesion/sesion.php");
+      }
     }
     ?>  
 			<div class="container">
@@ -21,7 +25,7 @@
 					<li class="col-md-1" id="h">Home</li>
 					<li class="col-md-3" id="ru">Registrar Universidad</li>
 					<li class="col-md-2" id="ra">Registrar &aacute;rbitro</li>
-					<li class="col-md-3">Registrar alumno</li>
+					<li class="col-md-3" id="Rarbitro">Registrar Pacas</li>
 					<li class="col-md-2" id="is">Iniciar Sesi&oacute;n</li>
 				</ul>
 			</nav>
@@ -102,6 +106,7 @@
     </fieldset>
   </form>
 </div>
+ 
 <center><img src="images/logo.jpg" class="imagen"></center>
 <script src="js/jquery.js"></script>
 <script src="js/myjs.js"></script>
