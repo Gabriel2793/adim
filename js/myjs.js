@@ -36,7 +36,7 @@ $( document ).ready(function() {
 		$("#verequipo").hide();
 		$("#form2").show();
 		$(".ocultar").hide();
-		$(".imagen").css({"width":"20em","height":"20em"});
+		$(".imagen").css({"width":"20em","height":"20em","margin-top":"2em"});
 	});
 
 	$("#verE").click(function(){
@@ -44,7 +44,7 @@ $( document ).ready(function() {
 		$("#verequipo").show();
 		$("#form1").hide();
 		$("#form2").hide();
-		$(".imagen").css({"width":"20em","height":"20em"});
+		$(".imagen").css({"width":"20em","height":"20em","margin-top":"2em"});
 	});
 
 });

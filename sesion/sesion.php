@@ -28,6 +28,13 @@
 			</nav>
 			<div class="container">
 			<div class="row">
+				<center>
+				<?php echo "<h2 class='titulo col-md-12'>". $_SESSION['u_usuario']."</h2>";?>
+				</center>
+			</div>
+		</div>
+			<div class="container">
+			<div class="row">
 				<div class="col-md-6">
 					<center>
 				<img src="../images/logo.jpg" class="imagen">
@@ -40,6 +47,7 @@
 				</div>
 			</div>
 		</div>
+
 			<div class="container">  
   <form class="contact" id="form" action="RE.php" method="post">
     <h3>Registro de Equipo</h3>
@@ -88,7 +96,7 @@
   	
  <?php 
   		$conexion2 = new Conecta();
-  		$conexion2 -> query = " SELECT  nombreE as equipo, numIntegrantes as integrantes, status as status, UNIVERSIDAD_idUniversidad as universidad FROM EQUIPO  where UNIVERSIDAD_idUniversidad=	".$iduni;
+  		$conexion2 -> query = " SELECT  nombreE as equipo, numIntegrantes as integrantes, status as status FROM EQUIPO  where UNIVERSIDAD_idUniversidad = ".$iduni;
 
             $conexion2 -> select_query();
                         $reg = count($conexion2 -> rows);
@@ -100,20 +108,16 @@
                 echo "<div class='container'>
 
     					<div class='row'>
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							Nombre del Equipo 
     						</div>
 
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							Numero de integrantes
     						</div>
 
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							status
-    						</div>
-
-    						<div class='col-md-3'>
-    							Universidad
     						</div>
     					</div>
 
@@ -122,21 +126,18 @@
     				echo "<div class='container'>
 
     					<div class='row'>
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							".$datos[$i]['equipo']."
     						</div>
 
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							".$datos[$i]['integrantes']."
     						</div>
 
-    						<div class='col-md-3'>
+    						<div class='col-md-4'>
     							".$datos[$i]['status']."
     						</div>
 
-    						<div class='col-md-3'>
-    							".$datos[$i]['universidad']."
-    						</div>
     					</div>
 
     				</div>";
