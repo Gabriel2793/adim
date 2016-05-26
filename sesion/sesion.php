@@ -22,7 +22,7 @@
 					<li class="col-md-1" id="h">Home</li>
 					<li class="col-md-3" id="RE">Registrar Equipo</li>
 					<li class="col-md-2" id="ra">Ver Calendario</li>
-					<li class="col-md-3">Observaciones</li>
+					<li class="col-md-3" id="verE">Ver Equipos</li>
 					<a href='cerrarS.php'><li class="col-md-2" id="is">Cerrar Sesi&oacute;n</li></a>
 				</ul>
 			</nav>
@@ -71,15 +71,79 @@
                     echo "<fieldset>
       <input name='UNIVERSIDAD_idUniversidad' placeholder='".$_SESSION['u_usuario']."' type='number' tabindex='2'  value='".$datos[$i]['id']."' class='ocultar' required>
     </fieldset>";
-                        
+                        $iduni=$datos[$i]['id'];
                 }
             }
         
         ?>
+
+        
     </fieldset>
       <button type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
     </fieldset>
   </form>
+  <br>
+  	<br>
+  <div id="verequipo" class="colortabla">
+  	
+ <?php 
+  		$conexion2 = new Conecta();
+  		$conexion2 -> query = " SELECT  nombreE as equipo, numIntegrantes as integrantes, status as status, UNIVERSIDAD_idUniversidad as universidad FROM EQUIPO  where UNIVERSIDAD_idUniversidad=	".$iduni;
+
+            $conexion2 -> select_query();
+                        $reg = count($conexion2 -> rows);
+            if($reg>0){
+                $msghtml="";
+                foreach ($conexion2 as $key => $value) {
+                    $datos=$value;
+                }
+                echo "<div class='container'>
+
+    					<div class='row'>
+    						<div class='col-md-3'>
+    							Nombre del Equipo 
+    						</div>
+
+    						<div class='col-md-3'>
+    							Numero de integrantes
+    						</div>
+
+    						<div class='col-md-3'>
+    							status
+    						</div>
+
+    						<div class='col-md-3'>
+    							Universidad
+    						</div>
+    					</div>
+
+    				</div>";
+                for($i=0; $i < $reg; $i++){ 
+    				echo "<div class='container'>
+
+    					<div class='row'>
+    						<div class='col-md-3'>
+    							".$datos[$i]['equipo']."
+    						</div>
+
+    						<div class='col-md-3'>
+    							".$datos[$i]['integrantes']."
+    						</div>
+
+    						<div class='col-md-3'>
+    							".$datos[$i]['status']."
+    						</div>
+
+    						<div class='col-md-3'>
+    							".$datos[$i]['universidad']."
+    						</div>
+    					</div>
+
+    				</div>";
+                }
+            }
+  	 ?>
+  	</div>
 </div>
 <script src="../js/jquery.js"></script>
 <script src="../js/myjs.js"></script>
