@@ -1,4 +1,4 @@
-ß<!DOCTYPE html>
+<!DOCTYPE html>
 	<html>
 		<head>
 			<title>Arco</title>
@@ -9,9 +9,10 @@
       <?php 
 
     session_start();
+    //substr($_SESSION['u_usuario'], 3)
     if(isset($_SESSION['u_usuario'])){
-      if(substr($_SESSION['u_usuario'], 3)==="ARB"){
-        header("location:sesion/sesionARB.php");
+      if($_SESSION['u_usuario'] === "ADM"){
+        header("location:sesion/ADM.php");
       }else{
         header("location:sesion/sesion.php");
       }
@@ -25,10 +26,12 @@
 					<li class="col-md-1" id="h">Home</li>
 					<li class="col-md-3" id="ru">Registrar Universidad</li>
 					<li class="col-md-2" id="ra">Registrar &aacute;rbitro</li>
-					<li class="col-md-3" id="Rarbitro">Registrar Pacas</li>
+					<li class="col-md-3" id="RP">Registrar Pacas</li>
 					<li class="col-md-2" id="is">Iniciar Sesi&oacute;n</li>
 				</ul>
 			</nav>
+
+      <!-- Universidad -->
 			<div class="container">  
   <form class="contact" id="form" action="sesion/RU.php" method="post">
     <h3>Registro de Universidad</h3>
@@ -57,31 +60,60 @@
   </form>
 </div>
 
+<!-- Administrador-->
+
+
+<div class="container">  
+  <form class="contact" id="form8" action="sesion/ingresaA.php" method="post">
+    <h3>Inisiar sesion administrador</h3>
+    <h4>Ingrese todos los campos</h4>
+    <fieldset>
+      <b>Usuario: <input name="usuario" placeholder="USUARIO" type="text" required autofocus></b>
+    </fieldset>
+    <fieldset>
+      <b>Contrase&ntilde;a: <input name="password" placeholder="password" type="text" tabindex="2" required></b>
+    </fieldset>
+    <fieldset>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+    </fieldset>
+  </form>
+</div>
+
 
 <!-- Arbitro -->
 
 
 <div class="container">  
-  <form class="contact" id="form1" action="" method="post">
+  <form class="contact" id="form1" action="sesion/ARB.php" method="post">
     <h3>Registro de &Aacute;rbitro</h3>
     <h4>Ingrese todos los campos</h4>
     <fieldset>
-      <b>Nombre: <input placeholder="Nombre" type="text" tabindex="1" required autofocus></b>
+      <b>Nombre: <input name="nombreA" placeholder="Nombre" type="text" tabindex="1" required autofocus></b>
     </fieldset>
     <fieldset>
-      <b>Direcci&oacute;n: <input placeholder="Direccion" type="text" tabindex="2" required></b>
+      <b>Direcci&oacute;n: <input name="direccion" placeholder="Direccion" type="text" tabindex="2" required></b>
     </fieldset>
     <fieldset>
-      <b>Telefono: <input placeholder="Telefono" type="tel" tabindex="3" required></b>
+      <b>Correo: <input name="correo" placeholder="Correo" type="email" tabindex="4" required></b>
     </fieldset>
     <fieldset>
-      <b>Correo: <input placeholder="Correo" type="email" tabindex="4" required></b>
+      <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
+    </fieldset>
+  </form>
+</div>
+
+<!-- Pacas -->
+
+
+<div class="container">  
+  <form class="contact" id="form6" action="sesion/RP.php" method="post">
+    <h3>Registro de Pacas</h3>
+    <h4>Ingrese todos los campos</h4>
+    <fieldset>
+      <b>N&uacute;mero de Paca: <input name="numPaca" placeholder="N&uacute;mero de Paca" type="number" min="1" max="10" required autofocus></b>
     </fieldset>
     <fieldset>
-      <b>Usuario<input placeholder="Usuario" type="text" required></input></b>
-    </fieldset>
-    <fieldset>
-      <b>Contrase&ntilde;a<input placeholder="Usuario" type="text" required></input></b>
+      <b>Status: <input name="status" placeholder="Status" type="text" tabindex="2" required></b>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
@@ -93,7 +125,7 @@
 
 <div class="container">  
   <form class="contact" id="form2" action="sesion/ingresa.php" method="post">
-    <h3>Iniciar Sesi&oacute;n</h3>
+    <h3>Iniciar Sesi&oacute;n Universidad</h3>
     <h4>Ingrese todos los campos</h4>
     <fieldset>
       <input name='usuario' placeholder="Universidad" type="text" tabindex="1" required autofocus>

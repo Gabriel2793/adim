@@ -32,6 +32,18 @@ CREATE TABLE IF NOT EXISTS `mydb`.`UNIVERSIDAD` (
   UNIQUE INDEX `nombreU_UNIQUE` (`nombreU` ASC))
 ENGINE = InnoDB;
 
+-- -----------------------------------------------------
+-- Table `mydb`.`ARBITRO`
+-- -----------------------------------------------------
+CREATE TABLE IF NOT EXISTS `mydb`.`ARBITRO` (
+  `idarbitro` INT AUTO_INCREMENT NOT NULL,
+  `nombreA` VARCHAR(45) NOT NULL,
+  `direccion` VARCHAR(45) NOT NULL,
+  `correo` VARCHAR(45) NOT NULL,
+  PRIMARY KEY (`idarbitro`),
+  UNIQUE INDEX `nombreU_UNIQUE` (`nombreA` ASC))
+ENGINE = InnoDB;
+
 
 -- -----------------------------------------------------
 -- Table `mydb`.`EQUIPO`
