@@ -13,7 +13,7 @@
 		if(substr($_SESSION['u_usuario'], 3)==="ARB"){
         header("location:sesion/sesionARB.php");
       }else{
-        header("location:sesion/sesion.php");
+        header("location:sesion.php");
       }
 	}else{
 		$ingresa->close();

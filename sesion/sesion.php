@@ -100,7 +100,7 @@
 		    					<?php 
 
 		    						$conexion3 = new Conecta();
-      $conexion3-> query = "SELECT e.clvEquipo as clave, e.nombreE AS nombreE FROM EQUIPO e, UNIVERSIDAD u where u.idUniversidad = e.UNIVERSIDAD_idUniversidad and u.nombreU = '".$_SESSION['u_usuario']."'";
+      $conexion3-> query = "SELECT clvPartido as partido FROM PARTIDO'";
 
             $conexion3 -> select_query();
             $reg = count($conexion3 -> rows);
@@ -110,7 +110,7 @@
                 }
                 echo " <select class='form-control' name='idequipo' placeholder='Elige equipo'>";
                 for($i=0; $i < $reg; $i++){ 
-                    echo "<option value=".$datos[$i]['clave'].">".$datos[$i]['nombreE']."</option>";
+                    echo "<option value=".$datos[$i]['partido'].">".$datos[$i]['nombreE']."</option>";
 		    						
                 }
                  echo "</select>";

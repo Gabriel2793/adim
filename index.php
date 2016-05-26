@@ -71,7 +71,7 @@
       <b>Usuario: <input name="usuario" placeholder="USUARIO" type="text" required autofocus></b>
     </fieldset>
     <fieldset>
-      <b>Contrase&ntilde;a: <input name="password" placeholder="password" type="text" tabindex="2" required></b>
+      <b>Contrase&ntilde;a: <input name="password" placeholder="password" type="password" tabindex="2" required></b>
     </fieldset>
     <fieldset>
       <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Enviar</button>
